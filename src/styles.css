@@ -1,0 +1,19 @@
+:root { font-family: Inter, system-ui, sans-serif; color: #172033; background: #eef3f8; }
+body { margin: 0; }
+.app-shell { display: grid; grid-template-columns: minmax(320px, 420px) 1fr; min-height: 100vh; }
+.panel { padding: 2rem; background: white; box-shadow: 0 0 24px rgb(0 0 0 / 10%); z-index: 2; }
+.lede { color: #516070; line-height: 1.5; }
+.grid-form { display: grid; gap: .8rem; margin: 1rem 0; }
+label { display: grid; gap: .3rem; font-weight: 700; }
+input { border: 1px solid #c8d1dc; border-radius: .6rem; padding: .7rem; font: inherit; }
+button { border: 0; border-radius: .6rem; padding: .75rem 1rem; background: #0f766e; color: white; font-weight: 800; cursor: pointer; }
+button[type="button"], button[data-edit] { background: #475569; }
+button[data-delete] { background: #dc2626; }
+.actions { display: flex; gap: .5rem; }
+.csv-import { margin-top: 1rem; }
+.results { display: grid; grid-template-rows: 60vh 1fr; }
+#map { min-height: 420px; width: 100%; }
+#company-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; padding: 1rem; overflow: auto; }
+.company-card { background: white; border-radius: 1rem; padding: 1rem; box-shadow: 0 8px 20px rgb(0 0 0 / 8%); }
+.company-card h3 { margin-top: 0; }
+@media (max-width: 860px) { .app-shell { grid-template-columns: 1fr; } .results { grid-template-rows: 420px auto; } }
