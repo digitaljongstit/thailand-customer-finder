@@ -5,9 +5,16 @@ body { margin: 0; }
 .lede { color: #516070; line-height: 1.5; }
 .grid-form { display: grid; gap: .8rem; margin: 1rem 0; }
 label { display: grid; gap: .3rem; font-weight: 700; }
-input { border: 1px solid #c8d1dc; border-radius: .6rem; padding: .7rem; font: inherit; }
+input, textarea { border: 1px solid #c8d1dc; border-radius: .6rem; padding: .7rem; font: inherit; }
 button { border: 0; border-radius: .6rem; padding: .75rem 1rem; background: #0f766e; color: white; font-weight: 800; cursor: pointer; }
 button[type="button"], button[data-edit] { background: #475569; }
+.keyword-search { display: grid; gap: .8rem; margin: 1rem 0; padding: 1rem; border: 1px solid #dbe3ed; border-radius: 1rem; background: #f8fafc; }
+.keyword-search h2 { margin: 0; font-size: 1.1rem; }
+.result-count { margin: 0; color: #0f766e; font-weight: 800; }
+.empty-results { align-self: start; padding: 1rem; background: white; border-radius: 1rem; color: #516070; }
+.company-card dl { display: grid; gap: .35rem; margin: .75rem 0; }
+.company-card dt { font-weight: 800; }
+.company-card dd { margin: 0; color: #516070; overflow-wrap: anywhere; }
 button[data-delete] { background: #dc2626; }
 .actions { display: flex; gap: .5rem; }
 .csv-import { margin-top: 1rem; }
