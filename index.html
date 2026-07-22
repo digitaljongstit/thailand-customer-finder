@@ -11,13 +11,19 @@
     <main class="app-shell">
       <section class="panel">
         <h1>Thailand Customer Finder</h1>
-        <p class="lede">ค้นหาบริษัทในประเทศไทยจาก Latitude, Longitude และรัศมี พร้อมจัดการข้อมูลและนำเข้า CSV</p>
+        <p class="lede">ค้นหาบริษัทในประเทศไทยจาก Keyword, Latitude, Longitude และรัศมี พร้อมจัดการข้อมูลและนำเข้า CSV</p>
         <form id="search-form" class="grid-form">
           <label>Latitude <input id="latitude" type="number" step="0.000001" value="13.756331" required /></label>
           <label>Longitude <input id="longitude" type="number" step="0.000001" value="100.501762" required /></label>
           <label>รัศมี (กม.) <input id="radius" type="number" min="0" step="0.1" value="5" required /></label>
           <button type="submit">ค้นหา</button>
         </form>
+        <section class="keyword-search" aria-labelledby="keyword-search-title">
+          <h2 id="keyword-search-title">Search by keyword</h2>
+          <label>Keyword <input id="keyword" type="search" placeholder="ค้นหา Company Name, Website, Email, Phone, Product Interest, Notes" autocomplete="off" /></label>
+          <button id="clear-search" type="button">Clear Search</button>
+          <p id="result-count" class="result-count">แสดง 0 ผลลัพธ์</p>
+        </section>
         <form id="company-form" class="grid-form">
           <input id="company-id" type="hidden" />
           <label>ชื่อบริษัท <input id="company-name" required /></label>
@@ -25,6 +31,11 @@
           <label>Latitude <input id="company-latitude" type="number" step="0.000001" required /></label>
           <label>Longitude <input id="company-longitude" type="number" step="0.000001" required /></label>
           <label>ที่อยู่ <input id="company-address" required /></label>
+          <label>Website <input id="company-website" type="url" placeholder="https://example.com" /></label>
+          <label>Email <input id="company-email" type="email" placeholder="sales@example.com" /></label>
+          <label>Phone <input id="company-phone" type="tel" /></label>
+          <label>Product Interest <input id="company-product-interest" /></label>
+          <label>Notes <textarea id="company-notes" rows="3"></textarea></label>
           <div class="actions"><button type="submit">บันทึก</button><button id="reset-form" type="button">ล้างฟอร์ม</button></div>
         </form>
         <label class="csv-import">นำเข้า CSV <input id="csv-file" type="file" accept=".csv,text/csv" /></label>
